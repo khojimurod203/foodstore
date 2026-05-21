@@ -5,7 +5,10 @@
   "private": true,
   "scripts": {
     "enable-safari": "safaridriver --enable",
-    "test": "node ./test/selenium.test.js"
+    "test": "node ./test/selenium.test.js",
+    "test:full": "node ./test/selenium.fulltest.js",
+    "test:chrome": "BROWSER=chrome node ./test/selenium.fulltest.js",
+    "test:firefox": "BROWSER=firefox node ./test/selenium.fulltest.js"
   },
   "dependencies": {
     "selenium-webdriver": "^4.16.0"
