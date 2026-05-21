@@ -55,14 +55,22 @@
         },
         {
           "id": "2",
-          "comment": "Search for Pizza",
-          "command": "type",
+          "comment": "Focus the search field",
+          "command": "click",
+          "target": "css=.search",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "3",
+          "comment": "Type Pizza into search",
+          "command": "sendKeys",
           "target": "css=.search",
           "targets": [],
           "value": "Pizza"
         },
         {
-          "id": "3",
+          "id": "4",
           "comment": "Click the search button",
           "command": "click",
           "target": "css=button.search-btn",
@@ -70,7 +78,7 @@
           "value": ""
         },
         {
-          "id": "4",
+          "id": "5",
           "comment": "Wait for filtered meals to appear",
           "command": "waitForElementPresent",
           "target": "css=.meal .meal-title",
@@ -78,7 +86,7 @@
           "value": ""
         },
         {
-          "id": "5",
+          "id": "6",
           "comment": "Verify the first visible meal contains Pizza",
           "command": "assertText",
           "target": "css=.meal .meal-title",
