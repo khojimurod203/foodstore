@@ -1,6 +1,6 @@
 # Food Store Selenium Tests
 
-This project uses Selenium WebDriver to run a simple browser smoke test against `home.html`.
+This project uses Selenium WebDriver to run a simple browser smoke test against `index.html`.
 
 ## Setup
 
@@ -28,7 +28,7 @@ The project includes a Selenium IDE test suite in `selenium-ide/project.side`.
 
 These IDE tests cover:
 
-- opening `home.html`
+- opening `index.html`
 - verifying the title and logo text
 - searching for `Pizza`
 - adding an item to the cart

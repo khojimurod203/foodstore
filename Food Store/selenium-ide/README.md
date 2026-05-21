@@ -25,7 +25,7 @@ This folder contains a Selenium IDE project for the `Food Store` app.
 
 ## What this project covers
 
-- opens `home.html` via `http://localhost:8000/home.html`
+- opens `index.html` via `http://localhost:8000/index.html`
 - verifies the page title is `Food Store`
 - verifies the heading text `Welcome to Food Store`
 - searches for `Pizza`
@@ -38,5 +38,5 @@ This folder contains a Selenium IDE project for the `Food Store` app.
 - Selenium IDE runs in the browser, not from the terminal. Open the Firefox extension to run the tests.
 - If you want a terminal-only test, use `npm test` in the `Food Store` folder. That runs the Node.js WebDriver script in `test/selenium.test.js`.
 - Keep the local server running while the Selenium IDE test executes.
-- If the test fails, make sure `http://localhost:8000/home.html` loads correctly in Firefox first.
+- If the test fails, make sure `http://localhost:8000/index.html` loads correctly in Firefox first.
 - The IDE project is separate from the Node.js WebDriver test in `test/selenium.test.js`.

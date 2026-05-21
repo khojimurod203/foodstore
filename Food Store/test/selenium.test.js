@@ -23,7 +23,7 @@ async function runTest() {
   }
 
   try {
-    const fileUrl = `file://${path.resolve(__dirname, '../home.html')}`;
+    const fileUrl = `file://${path.resolve(__dirname, '../index.html')}`;
     await driver.get(fileUrl);
 
     await testPageTitleAndLogo(driver);

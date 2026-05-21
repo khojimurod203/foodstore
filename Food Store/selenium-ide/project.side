@@ -11,7 +11,7 @@
           "id": "1",
           "comment": "Open the home page from the local server",
           "command": "open",
-          "target": "home.html",
+          "target": "index.html",
           "targets": [],
           "value": ""
         },
@@ -49,7 +49,7 @@
           "id": "1",
           "comment": "Open the home page",
           "command": "open",
-          "target": "home.html",
+          "target": "index.html",
           "targets": [],
           "value": ""
         },
@@ -95,7 +95,7 @@
           "id": "1",
           "comment": "Open the home page",
           "command": "open",
-          "target": "home.html",
+          "target": "index.html",
           "targets": [],
           "value": ""
         },
@@ -149,7 +149,7 @@
           "id": "1",
           "comment": "Open the home page",
           "command": "open",
-          "target": "home.html",
+          "target": "index.html",
           "targets": [],
           "value": ""
         },
@@ -193,7 +193,7 @@
     }
   ],
   "urls": [
-    "http://localhost:8000/home.html"
+    "http://localhost:8000/index.html"
   ],
   "plugins": []
 }
