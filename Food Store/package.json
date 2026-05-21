@@ -1,0 +1,13 @@
+{
+  "name": "food-store-selenium-tests",
+  "version": "1.0.0",
+  "description": "Selenium WebDriver tests for the Food Store static site.",
+  "private": true,
+  "scripts": {
+    "enable-safari": "safaridriver --enable",
+    "test": "node ./test/selenium.test.js"
+  },
+  "dependencies": {
+    "selenium-webdriver": "^4.16.0"
+  }
+}

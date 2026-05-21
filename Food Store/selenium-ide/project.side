@@ -1,0 +1,199 @@
+{
+  "version": "3.17.0",
+  "name": "Food Store Selenium IDE",
+  "url": "http://localhost:8000",
+  "tests": [
+    {
+      "id": "test1",
+      "name": "Open Food Store home and verify page",
+      "commands": [
+        {
+          "id": "1",
+          "comment": "Open the home page from the local server",
+          "command": "open",
+          "target": "home.html",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "2",
+          "comment": "Verify the page title is correct",
+          "command": "assertTitle",
+          "target": "Food Store",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "3",
+          "comment": "Verify the page heading is visible",
+          "command": "assertText",
+          "target": "css=h2.logo",
+          "targets": [],
+          "value": "Welcome to Food Store"
+        },
+        {
+          "id": "4",
+          "comment": "Verify the search button exists",
+          "command": "assertElementPresent",
+          "target": "css=button.search-btn",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "test2",
+      "name": "Search for Pizza and verify results",
+      "commands": [
+        {
+          "id": "1",
+          "comment": "Open the home page",
+          "command": "open",
+          "target": "home.html",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "2",
+          "comment": "Search for Pizza",
+          "command": "type",
+          "target": "css=.search",
+          "targets": [],
+          "value": "Pizza"
+        },
+        {
+          "id": "3",
+          "comment": "Click the search button",
+          "command": "click",
+          "target": "css=button.search-btn",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "4",
+          "comment": "Wait for filtered meals to appear",
+          "command": "waitForElementPresent",
+          "target": "css=.meal .meal-title",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "5",
+          "comment": "Verify the first visible meal contains Pizza",
+          "command": "assertText",
+          "target": "css=.meal .meal-title",
+          "targets": [],
+          "value": "Pizza"
+        }
+      ]
+    },
+    {
+      "id": "test3",
+      "name": "Add item to cart and verify cart",
+      "commands": [
+        {
+          "id": "1",
+          "comment": "Open the home page",
+          "command": "open",
+          "target": "home.html",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "2",
+          "comment": "Add the first item to cart",
+          "command": "click",
+          "target": "css=#plus",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "3",
+          "comment": "Open the cart panel",
+          "command": "click",
+          "target": "css=#cart-icon",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "4",
+          "comment": "Verify cart panel is active",
+          "command": "assertAttribute",
+          "target": "css=.cart@class",
+          "targets": [],
+          "value": "active"
+        },
+        {
+          "id": "5",
+          "comment": "Verify a cart item was added",
+          "command": "assertElementPresent",
+          "target": "css=.cart-item",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "6",
+          "comment": "Verify the cart total updated",
+          "command": "assertText",
+          "target": "css=.cart-total",
+          "targets": [],
+          "value": "regexp:Total:.*"
+        }
+      ]
+    },
+    {
+      "id": "test4",
+      "name": "Filter menu by category",
+      "commands": [
+        {
+          "id": "1",
+          "comment": "Open the home page",
+          "command": "open",
+          "target": "home.html",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "2",
+          "comment": "Click the first category box",
+          "command": "click",
+          "target": "css=.box:first-child",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "3",
+          "comment": "Verify the filtered menu shows a category meal",
+          "command": "assertElementPresent",
+          "target": "css=.meal .meal-title",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "suites": [
+    {
+      "id": "suite1",
+      "name": "Default Suite",
+      "tests": [
+        {
+          "id": "test1"
+        },
+        {
+          "id": "test2"
+        },
+        {
+          "id": "test3"
+        },
+        {
+          "id": "test4"
+        }
+      ]
+    }
+  ],
+  "urls": [
+    "http://localhost:8000/home.html"
+  ],
+  "plugins": []
+}
