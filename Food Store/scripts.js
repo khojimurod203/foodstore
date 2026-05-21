@@ -101,17 +101,16 @@ pluses.forEach((plus) => {
 
     // Initial calculation after adding item
     calculateTotalPrice();
-
-    const cartBtn = document.querySelector('.cart-btn');
-
-    cartBtn.addEventListener('click', ()=>{
-        cartItem.remove()
-        document.querySelector(".cart-total").textContent ="Total: $ 0";
-        alert("Thank you for your purchase. Have a good lunch")
-        cart.classList.remove('active');
-        //counter.textContent = "";
-    })
   });
+});
+
+const cartBtn = document.querySelector('.cart-btn');
+cartBtn.addEventListener('click', () => {
+  const cartItems = cart.querySelectorAll('.cart-item');
+  cartItems.forEach((item) => item.remove());
+  document.querySelector('.cart-total').textContent = 'Total: $ 0';
+  alert('Thank you for your purchase. Have a good lunch');
+  cart.classList.remove('active');
 });
 
 const boxes = document.querySelectorAll('.box');

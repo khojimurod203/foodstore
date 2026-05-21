@@ -147,6 +147,23 @@
           "targets": [],
           "value": "regexp:Total:.*"
         }
+        ,
+        {
+          "id": "7",
+          "comment": "Click Buy Now",
+          "command": "click",
+          "target": "css=.cart-btn",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "8",
+          "comment": "Verify purchase confirmation alert",
+          "command": "assertAlert",
+          "target": "Thank you for your purchase. Have a good lunch",
+          "targets": [],
+          "value": ""
+        }
       ]
     },
     {
